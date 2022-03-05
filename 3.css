@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: gray 0px 0px 5px 3px;
+  display: grid;
+  grid-template-areas:
+    "registration_title registration_title personal_title personal_title"
+    "username username first_name last_name"
+    "email email gender date"
+    "password password . ."
+    "check_recieve check_recieve . ."
+    "check_terms check_terms . ."
+    ". . . submit";
+grid-template-columns: repeat(4,1fr);
+
+grid-gap: 20px;
+}
+
+.registration_title {
+    grid-area:registration_title;
+}
+
+.username{
+    grid-area: username;
+}
+
+.email{
+    grid-area: email;
+}
+
+.password{
+    grid-area: password;
+}
+#password{
+    margin-right: 20px;
+}
+
+
+.personal_title{
+    grid-area: personal_title;
+}
+
+#first_name{
+    grid-area: first_name;
+}
+
+#last_name{
+    grid-area: last_name;
+}
+
+#gender{
+    grid-area: gender;
+}
+
+#date{
+    grid-area: date;
+}
+
+.offers{
+    grid-area: check_recieve;
+    display: flex;
+}
+
+.terms{
+    grid-area:check_terms ;
+}
+
+#submit{
+    grid-area: submit;
+    color: white;
+    background-color: rgb(13, 109, 109);
+    padding: 5px 20px;
+    margin-top: 50px;
+}
+
+img{
+    width: 34px;
+}
+
+label{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+img{
+    padding-right: 10px;
+}
+
+input:not(#offers, #terms), select{
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+}
+
+ 
+@media screen and (max-width: 899px){
+    .card{
+        grid-template-areas:
+    "registration_title registration_title"
+    "username username"
+    "email email"
+    "password password"
+    "personal_title personal_title"
+    "first_name last_name"
+    "gender date"
+    "check_recieve check_recieve"
+    "check_terms check_terms"
+    ". submit";
+
+    grid-template-columns: repeat(2,1fr)
+    }
+    
+}
+
+@media screen and (max-width: 599px){
+    .card{
+        grid-template-areas:
+    "registration_title registration_title"
+    "username username"
+    "email email"
+    "password password"
+    "personal_title personal_title"
+    "first_name first_name"
+    "last_name last_name"
+    "gender gender"
+    "date date"
+    "check_recieve check_recieve"
+    "check_terms check_terms"
+    ". submit";
+    grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .password{
+        display: grid;
+        grid-template-columns: 34px auto ;
+        grid-template-rows: auto auto;
+        grid-row-gap: 20px;
+    }
+    #confirm{
+        grid-area: 2/2/3/3;
+    }
+    
+}
+
+

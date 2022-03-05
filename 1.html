@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <title>1</title>
+</head>
+<body>
+    <div class="card">
+        <h1>Credit card details</h1>
+        <form>
+            <div>
+                <label for="text" >Card Number</label>
+                <input type="text" id="number" name="number" required
+                    minlength="16" maxlength="16" placeholder="1234567890123456">
+            </div>
+            <div>
+                <label for="name">Name On Card</label>
+                <input type="text" id="name" name="name" required placeholder="Name Surname">
+            </div>
+            <div class="expiry_date">
+                <div>
+                <label for="first-date">Expiry Date</label>
+                <input type="text" id="first-date" name="first-date" required
+                    minlength="2" maxlength="2" placeholder="02">
+                </div>
+                <div>
+                    <label for="second-date"></label>
+                    <input type="text" id="second-date" name="second-date" required minlength="4" maxlength="4" placeholder="2017">
+                </div>
+                <div>
+                    <label for="third-date">CVV/CVN</label>
+                    <input type="password" id="third-date" name="third-date" required minlength="3" maxlength="3" placeholder="***">
+                </div>
+
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

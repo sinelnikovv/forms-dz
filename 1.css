@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.card {
+  width: 700px;
+  margin: auto;
+  padding: 20px 20px 60px;
+  border-radius: 10px;
+
+  background: url(img/moon_flag.png) no-repeat right -15% bottom -15%;
+  background-size: 35%;
+  background-color: rgb(3, 206, 206);
+}
+
+form {
+  width: 70%;
+}
+
+h1 {
+  background-color: orangered;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px 50px;
+  left: -50px;
+}
+
+label {
+  display: block;
+  padding: 10px 0;
+}
+
+input {
+  padding: 5px;
+  border: 0;
+  border-bottom: 1px solid black;
+  background-color: rgb(2, 228, 228);
+  width: 100%;
+}
+
+.expiry_date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.expiry_date div {
+  width: 30%;
+}
